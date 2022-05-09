@@ -23,7 +23,7 @@ end
 local lib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/Vape.txt")()
 
 
-local win = lib:Window("vinilol's cw script lol",Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightControl)
+local win = lib:Window("vinilol's cw script lol :skull:",Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightControl)
 
 local tab = win:Tab("client lol")
 
@@ -112,7 +112,7 @@ function playerAdded(v)
              
               if (lp.Character and lp.Character:FindFirstChild("Head") and v.Character:FindFirstChild("Head")) then
                   local mag = (v.Character.Head.Position - lp.Character.Head.Position).Magnitude
-                  if mag < 13  then
+                  if mag < 12  then
                      
                       for _, animName in pairs(AnimNames) do
                           if info.Name:match(animName) then
@@ -186,8 +186,8 @@ end)
 
 
 
-local changeclr = win:Tab("mudar cor da ui lul")
+local changeclr = win:Tab("mudar cor da UI lul")
 
-changeclr:Colorpicker("Change UI Color",Color3.fromRGB(44, 120, 224), function(t)
+changeclr:Colorpicker("mudar a cor da UI",Color3.fromRGB(44, 120, 224), function(t)
 lib:ChangePresetColor(Color3.fromRGB(t.R * 255, t.G * 255, t.B * 255))
 end)
